@@ -27,10 +27,13 @@
 
     <div id="projects">
       <h2>Projects</h2>
-      <div v-for="project in projects" :key="project.title">
-        <h3>{{ project.title }}</h3>
-        <p>Mainly responsable for: {{ project.responsibility }}</p>
-        <p>Description: {{ project.description }}</p>
+      <div class="projects-container">
+        <div class="project-item" v-for="project in projects" :key="project.title">
+          <h3>{{ project.title }}</h3>
+          <p>Mainly responsable for: {{ project.responsibility }}</p>
+          <p>Description: {{ project.description }}</p>
+          <a v-if="project.url" :href="project.url" target="_black" rel="external nofollow noreferrer noopener">{{ project.url }}</a>
+        </div>
       </div>
       <hr />
     </div>
@@ -57,10 +60,41 @@ export default {
         }
       ],
       projects: [
-        { title: 'Schornstein-bremen.de', description: '', responsibility: '', img: '', url: '' },
-        { title: 'linus-ling.com', description: '', responsibility: '', img: '', url: '' },
-        { title: 'Master Thesis', description: '', responsibility: '', img: '', url: '' },
-        { title: 'Master Project', description: '', responsibility: '', img: '', url: '' }
+        {
+          title: 'Schornstein-bremen.de',
+          description: 'E-commerce online shop of ES Chimney GmbH.',
+          responsibility: 'Magento 2 front-end implementation (html, css, js, Bootstrap), backend production management.',
+          img: '',
+          url: 'schornstein-bremen.de'
+        },
+        {
+          title: 'Smarine.de',
+          description: 'E-commerce online shop of Smarine GmbH.',
+          responsibility: 'Magento 2 front-end implementation (html, css, js).',
+          img: '',
+          url: 'smarine.de'
+        },
+        {
+          title: 'linus-ling.com',
+          description: 'Personal website of Hui Ling.',
+          responsibility: 'Front-end implementation (html, css, js, Bootstrap).',
+          img: '',
+          url: 'linus-ling.com'
+        },
+        {
+          title: 'Master Thesis -- An "E-cigarette" For You Smartphone: Understanding The Impact Of Greyscale Mode On Smartphone Usage',
+          description: 'Compare personal smartphone addiction level before and after using greyscale mode on smartphones in 10 days.',
+          responsibility: 'Greyscale mode App implementation (Android), data collection (Firebase).',
+          img: '',
+          url: ''
+        },
+        {
+          title: 'Master Project -- Navigation Failure',
+          description: 'Compare user bahaviour changes between reality and VR environment, in terms of smartphone navigation interaction.',
+          responsibility: 'Navigational and user interaction tracking App impelementaion (iOS, Google Map API).',
+          img: '',
+          url: ''
+        }
       ]
     }
   }
@@ -84,5 +118,21 @@ hr {
 
 .content-block {
   margin: 20px;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project-item {
+  max-width: 560px;
+  min-width: 300px;
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.project-item p {
+  margin: 16px auto;
 }
 </style>

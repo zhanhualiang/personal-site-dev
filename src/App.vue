@@ -1,23 +1,27 @@
 <template>
-  <Header></Header>
-  <Homepage></Homepage>
-  <Footer></Footer>
+  <div id="header">
+    <h1>Zhanhua Liang</h1>
+    <p>Some call me Zhanhua, some call me Liang, and some call me "Cheng".</p>
+  </div>
+  <div id="nav">
+    <router-link to="/">Home</router-link> |
+    <router-link to="/about">About</router-link>
+  </div>
+  <hr>
+  <router-view/>
+  <Footer/>
 </template>
 
 <script>
-import Header from './components/Header'
 import Footer from './components/Footer'
-import Homepage from './components/homepage'
 
 export default {
-  name: 'App',
   components: {
-    Header,
-    Footer,
-    Homepage
+    Footer
   }
 }
 </script>
 
 <style>
+
 </style>

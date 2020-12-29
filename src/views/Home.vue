@@ -32,7 +32,7 @@
           <h3>{{ project.title }}</h3>
           <p>Mainly responsable for: {{ project.responsibility }}</p>
           <p>Description: {{ project.description }}</p>
-          <a v-if="project.url" :href="project.url" target="_black" rel="external nofollow noreferrer noopener">{{ project.url }}</a>
+          <a v-if="project.url" :href="'//' + project.url" target="_black" rel="external nofollow noreferrer noopener">{{ project.url }}</a>
         </div>
       </div>
       <hr />

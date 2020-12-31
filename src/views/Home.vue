@@ -6,6 +6,7 @@
         <p>Zhanhua Liang</p>
         <p>Male</p>
         <p>Born 1993.07 in Guangzhou, Guangdong, China</p>
+        <p>Contact: <a :href="'mailto:'+email">{{ email }}</a></p>
       </div>
       <hr />
     </div>
@@ -30,12 +31,34 @@
       <div class="projects-container">
         <div class="project-item" v-for="project in projects" :key="project.title">
           <h3>{{ project.title }}</h3>
-          <p>Mainly responsable for: {{ project.responsibility }}</p>
-          <p>Description: {{ project.description }}</p>
+          <p><u>Mainly responsable for:</u> {{ project.responsibility }}</p>
+          <p><u>Description:</u> {{ project.description }}</p>
           <a v-if="project.url" :href="'//' + project.url" target="_black" rel="external nofollow noreferrer noopener">{{ project.url }}</a>
         </div>
       </div>
       <hr />
+    </div>
+
+    <div id="job-experience">
+      <h2>Job Experience</h2>
+      <div class="job-container">
+        <div class="job-item" v-for="job in jobExperience" :key="job.title">
+          <h3>{{ job.title }}</h3>
+          <p><u>Position:</u> {{ job.position }}</p>
+          <p><u>Description:</u> {{ job.description }}</p>
+          <p><u>Period:</u> {{ job.period }}</p>
+        </div>
+      </div>
+      <hr>
+    </div>
+
+    <div id="skills">
+      <h2>Skills</h2>
+      <div class="skill">
+        <p>Main: HTML, CSS, JavaScript, Bootstrap, Vue.js 3</p>
+        <p>jQuery, Swift, Android</p>
+        <p>Mandarin (native), Cantonese (native), English (good), German (beginner)</p>
+      </div>
     </div>
   </div>
 </template>
@@ -45,6 +68,7 @@ export default {
   name: 'homePage',
   data () {
     return {
+      email: 'zhanhua1993@gmail.com',
       educations: [
         {
           university: 'University of Bremen',
@@ -95,6 +119,14 @@ export default {
           img: '',
           url: ''
         }
+      ],
+      jobExperience: [
+        {
+          title: 'ES Chimney',
+          position: 'Front end developer',
+          description: 'Implement front end web pages for the online shops of the company with html, css, js, Bootstrap and Magento 2 CMS. Also help managing products in Magento 2 backend.',
+          period: 'Since 2019.09'
+        }
       ]
     }
   }
@@ -132,7 +164,21 @@ hr {
   flex-grow: 1;
 }
 
-.project-item p {
+.job-container {
+  display: flex;
+}
+
+.job-item {
+  padding: 20px;
+}
+
+.project-item p, .job-item p, .skill p {
   margin: 16px auto;
+  line-height: 20px;
+}
+
+.skill {
+  padding: 20px;
+  text-align: center;
 }
 </style>

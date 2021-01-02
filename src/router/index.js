@@ -5,7 +5,18 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: Home,
+    metaTags: [
+      {
+        title: 'Zhanhua Liang - Home',
+        metaTags: [
+          {
+            name: 'description',
+            content: 'The personal introduction website of Zhanhua Liang.'
+          }
+        ]
+      }
+    ]
   },
   {
     path: '/tools',

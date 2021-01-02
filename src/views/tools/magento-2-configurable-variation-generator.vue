@@ -57,7 +57,6 @@ export default {
     },
     objectToString (csvDataObject) {
       var ResultText = ''
-
       csvDataObject.forEach(function (items) {
         for (const item in items) {
           ResultText += item + '=' + items[item] + ','

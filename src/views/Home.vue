@@ -7,6 +7,7 @@
         <p>Male</p>
         <p>Born 1993.07 in Guangzhou, Guangdong, China</p>
         <p>Contact: <a :href="'mailto:'+email">{{ email }}</a></p>
+        <p>Git: <a :href="git" target="_blank">{{ git }}</a></p>
       </div>
       <hr />
     </div>
@@ -69,6 +70,7 @@ export default {
   data () {
     return {
       email: 'zhanhua1993@gmail.com',
+      git: 'https://github.com/zhanhualiang',
       educations: [
         {
           university: 'University of Bremen',

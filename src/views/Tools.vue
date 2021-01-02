@@ -52,7 +52,7 @@ export default {
 
 .tools-item {
   max-width: 580px;
-  min-width: 300px;
+  min-width: 200px;
   padding: 20px;
   margin: 10px;
   flex-grow: 1;

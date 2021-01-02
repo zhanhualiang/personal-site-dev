@@ -32,6 +32,12 @@
         ></textarea>
       </div>
     </div>
+    <div id="instruction">
+      <h4>Instruction</h4>
+      <p>1. Upload .csv file with only content of <b>SKU</b> and <b>Configurable Attributes</b> of only the <b>simple products</b>.</p>
+      <p>2. Click "Output result".</p>
+      <p>3. Copy the resule from the result area and paste in the <b>Configurable Variation</b> column for the <b>Configurable product</b>.</p>
+    </div>
   </div>
 </template>
 
@@ -142,5 +148,10 @@ h2 {
   min-width: 250px;
   height: 200px;
   margin: 20px;
+}
+
+#instruction {
+  text-align: center;
+  padding: 30px;
 }
 </style>

@@ -12,3 +12,19 @@
 #footer {
     text-align: center;
 }
+
+a, a:visited {
+    color: darkgray;
+    text-decoration: none;
+}
+
+a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+.router-link-exact-active {
+    color: white!important;
+    background-color: black;
+    border-radius: 5px;
+}

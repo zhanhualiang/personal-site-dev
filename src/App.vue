@@ -5,8 +5,8 @@
       <p>Some call me Zhanhua, some call me Liang, and some call me "Cheng".</p>
     </div>
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/tools">Tools</router-link>
+      <router-link to="/" >Home</router-link> |
+      <router-link to="/tools" >Tools</router-link>
     </div>
   </div>
 
@@ -37,5 +37,14 @@ export default {
   margin-top: 20px;
   margin-right: 30px;
   font-size: 20px;
+}
+
+#nav a {
+  padding:5px 10px;
+}
+
+.current-tab {
+  color: white;
+  background-color: black;
 }
 </style>

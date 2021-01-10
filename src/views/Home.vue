@@ -3,12 +3,12 @@
     <div id="personal-info">
       <h2>Personal Info</h2>
       <div class="content-block">
-        <p>Zhanhua Liang</p>
+        <h3>Zhanhua Liang</h3>
         <p>Male</p>
         <p>Born 1993.07 in Guangzhou, Guangdong, China</p>
         <p>Contact: <a :href="'mailto:'+email">{{ email }}</a></p>
         <p>Git: <a :href="git" target="_blank">{{ git }}</a></p>
-        <p>Personal CV: <a :href="cvPDF.directory">{{ cvPDF.title }}</a></p>
+        <p>Personal CV: <a :href="cvPDF.directory" target="_blank">{{ cvPDF.title }}</a></p>
       </div>
       <hr />
     </div>
@@ -20,7 +20,7 @@
         v-for="education in educations"
         :key="education.university"
       >
-        <p>{{ education.university }}</p>
+        <h3>{{ education.university }}</h3>
         <p>{{ education.degree }}</p>
         <p>{{ education.major }}</p>
         <p>{{ education.period }}</p>

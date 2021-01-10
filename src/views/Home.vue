@@ -8,6 +8,7 @@
         <p>Born 1993.07 in Guangzhou, Guangdong, China</p>
         <p>Contact: <a :href="'mailto:'+email">{{ email }}</a></p>
         <p>Git: <a :href="git" target="_blank">{{ git }}</a></p>
+        <p>Personal CV: <a :href="cvPDF.directory">{{ cvPDF.title }}</a></p>
       </div>
       <hr />
     </div>
@@ -80,9 +81,9 @@ export default {
         },
         {
           university: 'Guangdong University of Technology',
-          degree: 'Bachlor',
+          degree: 'Bachelor',
           major: 'Digital Media Technology',
-          period: '2012.09-2020.08'
+          period: '2012.09-2016.08'
         }
       ],
       projects: [
@@ -116,7 +117,7 @@ export default {
         },
         {
           title: 'Master Project -- Navigation Failure',
-          description: 'Compare user bahaviour changes between reality and VR environment, in terms of smartphone navigation interaction.',
+          description: 'Compare user behaviour changes between reality and VR environment, in terms of smartphone navigation interaction.',
           responsibility: 'Navigational and user interaction tracking App impelementaion (iOS, Google Map API).',
           img: '',
           url: ''
@@ -129,7 +130,16 @@ export default {
           description: 'Implement front end web pages for the online shops of the company with html, css, js, Bootstrap and Magento 2 CMS. Also help managing products in Magento 2 backend.',
           period: 'Since 2019.09'
         }
-      ]
+      ],
+      cvPDF: {
+        title: 'Personal CV',
+        directory: './CV-ZhanhuaLiang.pdf'
+      }
+    }
+  },
+  methods: {
+    openLink (link) {
+      window.open(link)
     }
   }
 }
@@ -161,7 +171,7 @@ hr {
 
 .project-item {
   max-width: 560px;
-  min-width: 300px;
+  min-width: 200px;
   padding: 20px;
   flex-grow: 1;
 }

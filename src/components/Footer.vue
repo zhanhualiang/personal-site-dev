@@ -1,7 +1,7 @@
 <template>
   <hr />
   <footer id="footer">
-    <p>Copyright &copy; 2020 Zhanhua Liang. All right reserved</p>
+    <p>Copyright &copy; 2020 Zhanhua Liang. All rights reserved</p>
   </footer>
 </template>
 

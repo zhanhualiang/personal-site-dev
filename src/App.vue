@@ -33,6 +33,14 @@ export default {
   methods: {
     toogleLocale () {
       newI18n.getLocale() === 'en' ? newI18n.setLocale('cn') : newI18n.setLocale('en')
+      const currentLocale = newI18n.getLocale()
+      localStorage.setItem('currentLocal', currentLocale)
+    }
+  },
+  mounted () {
+    const currentLocale = localStorage.getItem('currentLocal')
+    if (currentLocale) {
+      newI18n.setLocale(currentLocale)
     }
   }
 }

@@ -89,5 +89,15 @@
   "skill": {
     "title": "Skills",
     "language": "Mandarin (native), Cantonese (native), English (good, C1), German (beginner, A2)"
+  },
+  "tool": {
+    "description": "Self-made pratical small tools for life and work. Third-party code are used.",
+    "content": [
+      {
+        "title": "Magento 2 Configurable Variation Generator",
+        "description": "A simple variation generator for Magento 2 CSV data upload between configurable product and simple product.",
+        "key": "magento-2-configurable-variation-generator"
+      }
+    ]
   }
 }

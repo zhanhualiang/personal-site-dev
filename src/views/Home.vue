@@ -27,14 +27,6 @@
     <div id="projects">
       <h2>{{ $t("project.title") }}</h2>
       <div class="projects-container">
-        <!--
-        <div class="project-item" v-for="project in projects" :key="project.title">
-          <h3>{{ project.title }}</h3>
-          <p><u>Mainly responsable for:</u> {{ project.responsibility }}</p>
-          <p><u>Description:</u> {{ project.description }}</p>
-          <a v-if="project.url" :href="'//' + project.url" target="_black" rel="external nofollow noreferrer noopener">{{ project.url }}</a>
-        </div>
-        -->
         <div class="project-item" v-for="i in projectCount" :key="i">
           <h3>{{ $t(`project.content[${i}].title`) }}</h3>
           <p>
@@ -94,9 +86,6 @@ export default {
     }
   },
   methods: {
-    openLink (link) {
-      window.open(link)
-    }
   }
 }
 </script>

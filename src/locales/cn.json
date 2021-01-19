@@ -90,5 +90,15 @@
       "skill": {
         "title": "技能",
         "language": "普通话（母语），粤语（母语），英语（流畅，C1），德语（入门，A2）"
+      },
+      "tool": {
+        "description": "为方便生活与工作的自制小工具。有使用第三方代码。",
+        "content": [
+          {
+            "title": "Magento 2 Configurable 变量产生器",
+            "description": "一个简单的变量生成器，可用于产生 Configurable 产品和 Simple 产品之间上传Magento 2 CSV数据。",
+            "key": "magento-2-configurable-variation-generator"
+          }
+        ]
       }
 }

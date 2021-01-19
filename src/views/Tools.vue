@@ -1,19 +1,18 @@
 <template>
   <div id="tools">
-    <h2>Tools</h2>
+    <h2>{{ $t('tools') }}</h2>
     <p>
-      Self-made pratical small tools for life and work. Third-party code are
-      used.
+      {{ $t('tool.description') }}
     </p>
     <div class="tools-container">
       <router-link
-        v-for="tool in tools"
-        :key="tool.key"
-        :to="'/tools/' + tool.key"
+        v-for="i in toolCount"
+        :key="i"
+        :to="'/tools/' + $t(`tool.content[${i}].key`)"
       >
         <div class="tools-item">
-          <h3>{{ tool.title }}</h3>
-          <p>{{ tool.description }}</p>
+          <h3>{{ $t(`tool.content[${i}].title`) }}</h3>
+          <p>{{ $t(`tool.content[${i}].description`) }}</p>
         </div>
       </router-link>
     </div>
@@ -24,13 +23,7 @@
 export default {
   data () {
     return {
-      tools: [
-        {
-          title: 'Magento 2 Configurable Variation Generator',
-          description: 'A simple variation generator for Magento 2 CSV data upload between configurable product and simple product.',
-          key: 'magento-2-configurable-variation-generator'
-        }
-      ]
+      toolCount: [0]
     }
   }
 }

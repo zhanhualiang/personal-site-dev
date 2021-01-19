@@ -56,7 +56,7 @@
           <h3>{{ $t(`jobExperience.content[${i}].title`) }}</h3>
           <p><u>{{ $t(`jobExperience.position`) }}</u> {{ $t(`jobExperience.content[${i}].position`) }}</p>
           <p><u>{{ $t(`jobExperience.description`) }}</u> {{ $t(`jobExperience.content[${i}].description`) }}</p>
-          <p><u>{{ $t(`jobExperience.period`) }}:</u> {{ $t(`jobExperience.content[${i}].period`) }}</p>
+          <p><u>{{ $t(`jobExperience.period`) }}</u> {{ $t(`jobExperience.content[${i}].period`) }}</p>
         </div>
       </div>
       <hr />
@@ -106,7 +106,7 @@ hr {
 }
 
 .content-block {
-  margin: 20px;
+  padding: 20px;
 }
 
 .projects-container {

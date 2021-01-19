@@ -1,12 +1,13 @@
 <template>
   <div id="header">
     <div id="title">
-      <h1>Zhanhua Liang</h1>
-      <p>Some call me Zhanhua, some call me Liang, and some call me "Cheng".</p>
+      <h1>{{ $t('personal-info.name') }}</h1>
+      <p>{{ $t('funny-words') }}</p>
     </div>
     <div id="nav">
-      <router-link to="/" >Home</router-link> |
-      <router-link to="/tools" >Tools</router-link>
+      <router-link to="/">{{ $t('home') }}</router-link>
+      <router-link to="/tools">{{ $t('tools') }}</router-link>
+      <a href="#" @click.prevent="toogleLocale">EN/中文</a>
     </div>
   </div>
 
@@ -17,30 +18,42 @@
 
 <script>
 import Footer from './components/Footer'
+import newI18n from '@/i18n'
 
 export default {
+  setup () {
+
+  },
   components: {
     Footer
+  },
+  data () {
+    return { langs: ['en', 'cn'] }
+  },
+  methods: {
+    toogleLocale () {
+      newI18n.getLocale() === 'en' ? newI18n.setLocale('cn') : newI18n.setLocale('en')
+    }
   }
 }
 </script>
 
 <style>
-#header{
+#header {
   display: flex;
   align-items: flex-end;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-#nav{
+#nav {
   margin-top: 20px;
   margin-right: 30px;
   font-size: 20px;
 }
 
 #nav a {
-  padding:5px 10px;
+  padding: 5px 10px;
 }
 
 .current-tab {

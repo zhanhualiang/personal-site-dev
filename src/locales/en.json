@@ -1,3 +1,93 @@
 {
-  "message": "hello i18n !!"
+  "message": "hello i18n !!",
+  "funny-words": "Some call me Zhanhua, some call me Liang, and some call me \"Cheng\".",
+  "home": "Home",
+  "tools": "Tools",
+  "lang": "EN",
+  "personal-info": {
+    "title": "Personal Info",
+    "name": "Zhanhua Liang",
+    "gender": "Male",
+    "birth": "Born Jul. 1993 in Guangzhou, Guangdong, China",
+    "contact": "Contact: <a href='mailto:zhanhua.liang.uni@qq.com'>zhanhua.liang.uni@qq.com</a>",
+    "git": "Git: <a href='https://github.com/zhanhualiang' target='_blank'>https://github.com/zhanhualiang</a>",
+    "cv": "Personal CV: <a href='./EN-CV-ZhanhuaLiang.pdf' target='_blank'>CV Download</a>"
+  },
+  "education": {
+    "title": "Education",
+    "content": [
+      {
+        "university": "University of Bremen",
+        "degree": "Master of Science (M.Sc.)",
+        "major": "Digital Media",
+        "period": "Oct.2016. - Oct.2020"
+      },
+      {
+        "university": "China · Guangdong University of Technology",
+        "degree": "Bachelor",
+        "major": "Digital Media Technology",
+        "period": "Sep.2012 - Aug.2016"
+      }
+    ]
+  },
+  "project": {
+    "title": "Projects",
+    "responsibility": "Mainly responsable for: ",
+    "description": "Description: ",
+    "content": [
+      {
+        "title": "Schornstein-bremen.de",
+        "description": "E-commerce online shop of ES Chimney GmbH.",
+        "responsibility": "Magento 2 front-end implementation (html, css, js, Bootstrap), backend production management.",
+        "img": "",
+        "url": "schornstein-bremen.de"
+      },
+      {
+        "title": "Smarine.de",
+        "description": "E-commerce online shop of Smarine GmbH.",
+        "responsibility": "Magento 2 front-end implementation (html, css, js).",
+        "img": "",
+        "url": "smarine.de"
+      },
+      {
+        "title": "linus-ling.com",
+        "description": "Personal website of Hui Ling.",
+        "responsibility": "Front-end implementation (html, css, js, Bootstrap).",
+        "img": "",
+        "url": "linus-ling.com"
+      },
+      {
+        "title": "Master Thesis -- An \"E-cigarette\" For You Smartphone: Understanding The Impact Of Greyscale Mode On Smartphone Usage",
+        "description": "Compare personal smartphone addiction level before and after using greyscale mode on smartphones in 10 days.",
+        "responsibility": "Greyscale mode App implementation (Android), data collection (Firebase).",
+        "img": "",
+        "url": ""
+      },
+      {
+        "title": "Master Project -- Navigation Failure",
+        "description": "Compare user behaviour changes between reality and VR environment, in terms of smartphone navigation interaction.",
+        "responsibility": "Navigational and user interaction tracking App impelementaion (iOS, Google Map API).",
+        "img": "",
+        "url": ""
+      }
+    ]
+  },
+  "jobExperience": {
+    "title": "Job Experience",
+    "position": "Position: ",
+    "description": "Description: ",
+    "period": "Period: ",
+    "content": [
+      {
+        "title": "ES Chimney GmbH",
+        "position": "Magento 2 Front end developer",
+        "description": "Implement front end web pages for the online shops of the company with html, css, js, Bootstrap and Magento 2 CMS. Also help managing products in Magento 2 backend.",
+        "period": "Since Sep.2019"
+      }
+    ]
+  },
+  "skill": {
+    "title": "Skills",
+    "language": "Mandarin (native), Cantonese (native), English (good, C1), German (beginner, A2)"
+  }
 }

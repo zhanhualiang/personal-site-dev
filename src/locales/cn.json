@@ -1,0 +1,94 @@
+{
+    "message": "你好 i18n !!",
+    "funny-words": "有的人叫做我华仔，有的人叫我梁，还有人叫我“Cheng”。",
+    "home": "首页",
+    "tools": "小工具",
+    "lang": "中文",
+    "personal-info": {
+        "title": "个人信息",
+        "name": "梁展华",
+        "gender": "男",
+        "birth": "1993年7月，广东广州",
+        "contact": "联系方式: <a href='mailto:zhanhua.liang.uni@qq.com'>zhanhua.liang.uni@qq.com</a>",
+        "git": "Git: <a href='https://github.com/zhanhualiang' target='_blank'>https://github.com/zhanhualiang</a>",
+        "cv-directory": "./CV-ZhanhuaLiang.pdf",
+        "cv": "个人简历: <a href='./CN-CV-ZhanhuaLiang.pdf' target='_blank'>简历下载</a>"
+      },
+      "education": {
+        "title": "教育经历",
+        "content": [
+          {
+            "university": "德国 · 不莱梅大学",
+            "degree": "硕士学位",
+            "major": "数字媒体",
+            "period": "2016.10-2020.10"
+          },
+          {
+            "university": "广东工业大学",
+            "degree": "本科学位",
+            "major": "数字媒体技术",
+            "period": "2012.09-2016.08"
+          }
+        ]
+      },
+      "project": {
+        "title": "项目经历",
+        "responsibility": "主要负责：",
+        "description": "项目描述：",
+        "content": [
+          {
+            "title": "Schornstein-bremen.de",
+            "description": "ES Chimney GmbH 的电商平台",
+            "responsibility": "在 Magento 2 的框架下使用 HTML、CSS、Bootstrap、 JavaScript 等来实现网店首页及相关需求页面。协助在 Magento 2 后台产品管理。",
+            "img": "",
+            "url": "schornstein-bremen.de"
+          },
+          {
+            "title": "Smarine.de",
+            "description": "Smarine GmbH 的电商平台",
+            "responsibility": "在 Magento 2 的框架下使用 HTML、CSS、Bootstrap、 JavaScript 等来实现网店首页及相关需求页面。协助在 Magento 2 后台产品管理。",
+            "img": "",
+            "url": "smarine.de"
+          },
+          {
+            "title": "linus-ling.com",
+            "description": "Hui Ling 的个人网站",
+            "responsibility": "按照要求，负责整个网站的建设，包括前端（HTML、CSS、Bootstrap、 JavaScript），租赁服务器，打包上传与发布。",
+            "img": "",
+            "url": "linus-ling.com"
+          },
+          {
+            "title": "硕士论文 -- An \"E-cigarette\" For You Smartphone: Understanding The Impact Of Greyscale Mode On Smartphone Usage",
+            "description": "尝试调查安卓手机用户在灰度模式下的用户行为是否会与普 通显示模式下的行为有所不同。",
+            "responsibility": "实现安卓下的灰度模式App, 通过Firebase实现数据收集。",
+            "img": "",
+            "url": ""
+          },
+          {
+            "title": "硕士项目 -- Navigation Failure",
+            "description": "对比用户在现实环境与虚拟现实环境中的手机导航交互行为，是为后续实践提供建议。",
+            "responsibility": "主要参与使用 Google Map API 开发 iOS 端的导航 APP。",
+            "img": "",
+            "url": ""
+          }
+        ]
+      },
+      "jobExperience": {
+        "title": "工作经历",
+        "position": "职位：",
+        "description": "工作描述：",
+        "period": "时间：",
+        "content": [
+          {
+            "title": "ES Chimney GmbH",
+            "position": "Magento 2 前端工程师",
+            "description": "主要负责公司网店前端的实现和维护。在 Magento 2 的框架下使用 HTML、CSS、Bootstrap、 JavaScript 等来实现网店首页及相关需求页面。同时协助在 Magento 2 后台产品管理。",
+            "period": "2019.09 至今"
+          }
+        ]
+      },
+      "skill": {
+        "title": "技能",
+        "language": "普通话（母语），粤语（母语），英语（流畅，C1），德语（入门，A2）"
+      }
+}

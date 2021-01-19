@@ -1,65 +1,81 @@
 <template>
   <div id="main-content">
     <div id="personal-info">
-      <h2>Personal Info</h2>
+      <h2>{{ $t("personal-info.title") }}</h2>
       <div class="content-block">
-        <h3>Zhanhua Liang</h3>
-        <p>Male</p>
-        <p>Born 1993.07 in Guangzhou, Guangdong, China</p>
-        <p>Contact: <a :href="'mailto:'+email">{{ email }}</a></p>
-        <p>Git: <a :href="git" target="_blank">{{ git }}</a></p>
-        <p>Personal CV: <a :href="cvPDF.directory" target="_blank">{{ cvPDF.title }}</a></p>
+        <h3>{{ $t("personal-info.name") }}</h3>
+        <p>{{ $t("personal-info.gender") }}</p>
+        <p>{{ $t("personal-info.birth") }}</p>
+        <p v-html="$t('personal-info.contact')"></p>
+        <p v-html="$t('personal-info.git')"></p>
+        <p v-html="$t('personal-info.cv')"></p>
       </div>
       <hr />
     </div>
 
     <div id="education">
-      <h2>Education</h2>
-      <div
-        class="content-block"
-        v-for="education in educations"
-        :key="education.university"
-      >
-        <h3>{{ education.university }}</h3>
-        <p>{{ education.degree }}</p>
-        <p>{{ education.major }}</p>
-        <p>{{ education.period }}</p>
+      <h2>{{ $t("education.title") }}</h2>
+      <div class="content-block" v-for="i in educationCount" :key="i">
+        <h3>{{ $t(`education.content[${i}].university`) }}</h3>
+        <p>{{ $t(`education.content[${i}].degree`) }}</p>
+        <p>{{ $t(`education.content[${i}].major`) }}</p>
+        <p>{{ $t(`education.content[${i}].period`) }}</p>
       </div>
       <hr />
     </div>
 
     <div id="projects">
-      <h2>Projects</h2>
+      <h2>{{ $t("project.title") }}</h2>
       <div class="projects-container">
+        <!--
         <div class="project-item" v-for="project in projects" :key="project.title">
           <h3>{{ project.title }}</h3>
           <p><u>Mainly responsable for:</u> {{ project.responsibility }}</p>
           <p><u>Description:</u> {{ project.description }}</p>
           <a v-if="project.url" :href="'//' + project.url" target="_black" rel="external nofollow noreferrer noopener">{{ project.url }}</a>
         </div>
+        -->
+        <div class="project-item" v-for="i in projectCount" :key="i">
+          <h3>{{ $t(`project.content[${i}].title`) }}</h3>
+          <p>
+            <u>{{ $t("project.description") }}</u>
+            {{ $t(`project.content[${i}].description`) }}
+          </p>
+          <p>
+            <u>{{ $t("project.responsibility") }}</u>
+            {{ $t(`project.content[${i}].responsibility`) }}
+          </p>
+          <a
+            v-if="$t(`project.content[${i}].url`)"
+            :href="'//' + $t(`project.content[${i}].url`)"
+            target="_black"
+            rel="external nofollow noreferrer noopener"
+            >{{ $t(`project.content[${i}].url`) }}</a
+          >
+        </div>
       </div>
       <hr />
     </div>
 
     <div id="job-experience">
-      <h2>Job Experience</h2>
+      <h2>{{ $t('jobExperience.title') }}</h2>
       <div class="job-container">
-        <div class="job-item" v-for="job in jobExperience" :key="job.title">
-          <h3>{{ job.title }}</h3>
-          <p><u>Position:</u> {{ job.position }}</p>
-          <p><u>Description:</u> {{ job.description }}</p>
-          <p><u>Period:</u> {{ job.period }}</p>
+        <div class="job-item" v-for="i in jobExperienceCount" :key="i">
+          <h3>{{ $t(`jobExperience.content[${i}].title`) }}</h3>
+          <p><u>{{ $t(`jobExperience.position`) }}</u> {{ $t(`jobExperience.content[${i}].position`) }}</p>
+          <p><u>{{ $t(`jobExperience.description`) }}</u> {{ $t(`jobExperience.content[${i}].description`) }}</p>
+          <p><u>{{ $t(`jobExperience.period`) }}:</u> {{ $t(`jobExperience.content[${i}].period`) }}</p>
         </div>
       </div>
-      <hr>
+      <hr />
     </div>
 
     <div id="skills">
-      <h2>Skills</h2>
+      <h2>{{ $t('skill.title') }}</h2>
       <div class="skill">
-        <p>Main: HTML, CSS, JavaScript, Bootstrap, Vue.js 3</p>
+        <p>HTML, CSS, JavaScript, Bootstrap, Vue.js 3</p>
         <p>jQuery, Swift, Android</p>
-        <p>Mandarin (native), Cantonese (native), English (good), German (beginner)</p>
+        <p>{{ $t('skill.language') }}</p>
       </div>
     </div>
   </div>
@@ -72,69 +88,9 @@ export default {
     return {
       email: 'zhanhua1993@gmail.com',
       git: 'https://github.com/zhanhualiang',
-      educations: [
-        {
-          university: 'University of Bremen',
-          degree: 'Master of Science (M.Sc.)',
-          major: 'Digital Media',
-          period: '2016.10-2020.10'
-        },
-        {
-          university: 'Guangdong University of Technology',
-          degree: 'Bachelor',
-          major: 'Digital Media Technology',
-          period: '2012.09-2016.08'
-        }
-      ],
-      projects: [
-        {
-          title: 'Schornstein-bremen.de',
-          description: 'E-commerce online shop of ES Chimney GmbH.',
-          responsibility: 'Magento 2 front-end implementation (html, css, js, Bootstrap), backend production management.',
-          img: '',
-          url: 'schornstein-bremen.de'
-        },
-        {
-          title: 'Smarine.de',
-          description: 'E-commerce online shop of Smarine GmbH.',
-          responsibility: 'Magento 2 front-end implementation (html, css, js).',
-          img: '',
-          url: 'smarine.de'
-        },
-        {
-          title: 'linus-ling.com',
-          description: 'Personal website of Hui Ling.',
-          responsibility: 'Front-end implementation (html, css, js, Bootstrap).',
-          img: '',
-          url: 'linus-ling.com'
-        },
-        {
-          title: 'Master Thesis -- An "E-cigarette" For You Smartphone: Understanding The Impact Of Greyscale Mode On Smartphone Usage',
-          description: 'Compare personal smartphone addiction level before and after using greyscale mode on smartphones in 10 days.',
-          responsibility: 'Greyscale mode App implementation (Android), data collection (Firebase).',
-          img: '',
-          url: ''
-        },
-        {
-          title: 'Master Project -- Navigation Failure',
-          description: 'Compare user behaviour changes between reality and VR environment, in terms of smartphone navigation interaction.',
-          responsibility: 'Navigational and user interaction tracking App impelementaion (iOS, Google Map API).',
-          img: '',
-          url: ''
-        }
-      ],
-      jobExperience: [
-        {
-          title: 'ES Chimney',
-          position: 'Front end developer',
-          description: 'Implement front end web pages for the online shops of the company with html, css, js, Bootstrap and Magento 2 CMS. Also help managing products in Magento 2 backend.',
-          period: 'Since 2019.09'
-        }
-      ],
-      cvPDF: {
-        title: 'Personal CV',
-        directory: './CV-ZhanhuaLiang.pdf'
-      }
+      educationCount: [0, 1],
+      projectCount: [0, 1, 2, 3, 4],
+      jobExperienceCount: [0]
     }
   },
   methods: {
@@ -184,7 +140,9 @@ hr {
   padding: 20px;
 }
 
-.project-item p, .job-item p, .skill p {
+.project-item p,
+.job-item p,
+.skill p {
   margin: 16px auto;
   line-height: 20px;
 }

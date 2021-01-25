@@ -59,8 +59,10 @@ export default {
 }
 
 .tools-item {
-  width: 580px;
   height: 100px;
+  width: 500px;
+  max-width: 580px;
+  max-height: 200px;
   min-width: 200px;
   min-height: 80px;
   padding: 20px;
@@ -71,5 +73,12 @@ export default {
 
 .tools-item:hover {
   background: gray;
+}
+
+@media only screen and (max-width: 600px) {
+  .tools-item {
+    width: auto;
+    height: auto;
+  }
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div id="tool-container">
-    <h2>Magento 2 Configurable Variation Generator</h2>
+    <h2>{{ $t('tool.content[0].title') }}</h2>
     <div id="tool-content">
       <div id="input-area">
         <input

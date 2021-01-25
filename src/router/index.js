@@ -32,6 +32,11 @@ const routes = [
     component: () => import('../views/tools/magento-2-configurable-variation-generator.vue')
   },
   {
+    path: '/tools/simple-score-board',
+    name: 'Simple Score Board',
+    component: () => import('../views/tools/simple-score-board.vue')
+  },
+  {
     path: '/:catchAll(.*)',
     name: 'NotFould',
     component: () => import('../views/404-NotFound.vue')

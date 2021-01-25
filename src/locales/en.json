@@ -97,6 +97,11 @@
         "title": "Magento 2 Configurable Variation Generator",
         "description": "A simple variation generator for Magento 2 CSV data upload between configurable product and simple product.",
         "key": "magento-2-configurable-variation-generator"
+      },
+      {
+        "title": "Simple Score Board",
+        "description": "A simple score board tool for score-tracking of games.",
+        "key": "simple-score-board"
       }
     ]
   }

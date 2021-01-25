@@ -98,6 +98,11 @@
             "title": "Magento 2 Configurable 变量产生器",
             "description": "一个简单的变量生成器，可用于产生 Configurable 产品和 Simple 产品之间上传Magento 2 CSV数据。",
             "key": "magento-2-configurable-variation-generator"
+          },
+          {
+            "title": "简易计分板",
+            "description": "一个简易的游戏计分板",
+            "key": "simple-score-board"
           }
         ]
       }

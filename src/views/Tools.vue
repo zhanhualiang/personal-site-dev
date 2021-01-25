@@ -1,12 +1,12 @@
 <template>
   <div id="tools">
-    <h2>{{ $t('tools') }}</h2>
+    <h2>{{ $t("tools") }}</h2>
     <p>
-      {{ $t('tool.description') }}
+      {{ $t("tool.description") }}
     </p>
     <div class="tools-container">
       <router-link
-        v-for="i in toolCount"
+        v-for="i in dynamicToolCount"
         :key="i"
         :to="'/tools/' + $t(`tool.content[${i}].key`)"
       >
@@ -20,11 +20,26 @@
 </template>
 
 <script>
+import jsonContent from '../locales/en.json'
+
 export default {
   data () {
     return {
-      toolCount: [0]
+      msg: 'tool page'
     }
+  },
+  computed: {
+    dynamicToolCount: function () {
+      const toolCount = jsonContent.tool.content.length
+      const toolArray = []
+      for (var i = 0; i < toolCount; i++) {
+        toolArray.push(i)
+      }
+      return toolArray
+    }
+  },
+  mounted () {
+    console.log('Tool page mounted.')
   }
 }
 </script>
@@ -44,15 +59,17 @@ export default {
 }
 
 .tools-item {
-  max-width: 580px;
+  width: 580px;
+  height: 100px;
   min-width: 200px;
+  min-height: 80px;
   padding: 20px;
   margin: 10px;
   flex-grow: 1;
   background: lightgray;
 }
 
-.tools-item:hover{
+.tools-item:hover {
   background: gray;
 }
 </style>

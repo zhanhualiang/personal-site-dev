@@ -117,7 +117,7 @@ td {
 
   .change-score {
     margin: 5px;
-    padding: 5px 10px;
+    padding: 5px 15px;
   }
 
   #score-board {
